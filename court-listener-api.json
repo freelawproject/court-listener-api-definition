@@ -353,7 +353,7 @@
         {
           "method": "GET",
           "summary": "Pulls opinions that cite the opinion",
-          "notes": "Provides a paginated display of the opinions that cite the  opinion",
+          "notes": "Provides a paginated display of the opinions that cite the opinion",
           "nickname": "getOpinion",
           "type": "opinion",
           "parameters": [
