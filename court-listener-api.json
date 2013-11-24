@@ -1,0 +1,801 @@
+{
+  "apiVersion": "0.1",
+  "swaggerVersion": "1.2",
+  "basePath": "https://www.courtlistener.com/api/rest/v1",
+  "resourcePath": "/",
+  "produces": [
+    "application/xml",
+    "application/json"
+  ],
+  "apis": [
+    {
+      "path": "/opinion/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Pulls court opinions",
+          "notes": "Returns a list of opinions",
+          "nickname": "getOpinion",
+          "type": "opinion",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "format",
+              "description": "response format for calls (XML,JSON,JSONP)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "fields",
+              "description": "common delimited fields for return fields",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "order_by",
+              "description": "which field to order results by",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "limit",
+              "description": "number of records to limi response listing by (1000 max)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "absolute_url",
+              "description": "pull the detail for an opinion",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "blocked",
+              "description": "Whether the opinion should be blocked from search engines",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "citation_count",
+              "description": "The number of times the opinion has been cited by other opinions",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "court",
+              "description": "The ID of the court where the opinion was written",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "date_filed",
+              "description": "The date the opinion was filed by the court",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "date_modified",
+              "description": "The date and time the opinion was last modified",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "extracted_by_ocr",
+              "description": "Whether the text of the opinion was extracted from an image using OCR",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "precedential_status",
+              "description": "Whether the opinion has precedential value",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "time_retrieved",
+              "description": "The date and time the opinion was added to our system",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Opinions To Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/citation/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Pulls citations",
+          "notes": "Returns a list of citations",
+          "nickname": "getCitations",
+          "type": "citations",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "format",
+              "description": "response format for calls (XML,JSON,JSONP)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "fields",
+              "description": "common delimited fields for return fields",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "order_by",
+              "description": "which field to order results by",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "limit",
+              "description": "number of records to limi response listing by (1000 max)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "absolute_url",
+              "description": "pull the detail for an opinion",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "blocked",
+              "description": "Whether the opinion should be blocked from search engines",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "citation_count",
+              "description": "The number of times the opinion has been cited by other opinions",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "court",
+              "description": "The ID of the court where the opinion was written",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "date_filed",
+              "description": "The date the opinion was filed by the court",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "date_modified",
+              "description": "The date and time the opinion was last modified",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "extracted_by_ocr",
+              "description": "Whether the text of the opinion was extracted from an image using OCR",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "precedential_status",
+              "description": "Whether the opinion has precedential value",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "time_retrieved",
+              "description": "The date and time the opinion was added to our system",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Opinions To Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/cites/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Pulls opinions that opinion cites",
+          "notes": "Provides a paginated display of the opinions that an opinion cites",
+          "nickname": "getOpinion",
+          "type": "opinion",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "id",
+              "description": "id for an opinion",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Opinions To Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/cited-by/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Pulls opinions that opinion cites",
+          "notes": "Provides a paginated display of the opinions that an opinion cites",
+          "nickname": "getOpinion",
+          "type": "opinion",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "id",
+              "description": "id for an opinion",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Opinions To Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/jurisdiction/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Pulls jurisdictions",
+          "notes": "Provides basic information about the 350 jurisdictions in the American court system",
+          "nickname": "getJurisdiction",
+          "type": "jurisdiction",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "format",
+              "description": "response format for calls (XML,JSON,JSONP)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "fields",
+              "description": "common delimited fields for return fields",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "order_by",
+              "description": "which field to order results by",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "limit",
+              "description": "number of records to limi response listing by (1000 max)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "absolute_url",
+              "description": "pull the detail for an opinion",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Jurisdictions To Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/search/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Runs advanced search",
+          "notes": "Provides an advanced search via solr",
+          "nickname": "search",
+          "type": "opinion",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "format",
+              "description": "response format for calls (XML,JSON,JSONP)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "fields",
+              "description": "common delimited fields for return fields",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "order_by",
+              "description": "which field to order results by",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "limit",
+              "description": "number of records to limi response listing by (1000 max)",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "absolute_url",
+              "description": "pull the detail for an opinion",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Jurisdictions To Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/coverage/{id}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Runs advanced search",
+          "notes": "Provides an advanced search via solr",
+          "nickname": "search",
+          "type": "opinion",
+          "parameters": [
+            {
+              "id": "appid",
+              "name": "appid",
+              "description": "application id for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },
+            {
+              "id": "appkey",
+              "name": "appkey",
+              "description": "application key for application making calls",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "query"
+            },          
+            {
+              "name": "id",
+              "description": "Jurisdiction ID to be query",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "No Coverage To Return"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "opinion": {
+      "id": "opinion",
+      "properties": {
+        "absolute_url": {
+          "type": "string"
+        },
+        "blocked": {
+          "type": "boolean"
+        },
+        "citation": {
+          "type": "array",
+          "items": {
+            "$ref": "citation"
+          }
+        },
+        "citation_count": {
+          "type": "integer"
+        },
+        "court": {
+          "type": "string"
+        },
+        "date_blocked": {
+          "type": "date"
+        },
+        "date_filed": {
+          "type": "date"
+        },
+        "date_modified": {
+          "type": "date"
+        },
+        "download_URL": {
+          "type": "string"
+        },
+        "extracted_by_ocr": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "judges": {
+          "type": "string"
+        },
+        "local_path": {
+          "type": "string"
+        },
+        "nature_of_suit": {
+          "type": "string"
+        },
+        "pagerank": {
+          "type": "long"
+        },
+        "precedential_status": {
+          "type": "string"
+        },
+        "resource_uri": {
+          "type": "string"
+        },
+        "sha1": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "time_retrieved": {
+          "type": "date"
+        }
+      }
+    },
+    "citation": {
+      "id": "citation",
+      "properties": {
+        "absolute_url": {
+          "type": "string"
+        },
+        "blocked": {
+          "type": "boolean"
+        },
+        "citation": {
+          "type": "array",
+          "items": {
+            "$ref": "Type"
+          }
+        },
+        "case_name": {
+          "type": "string"
+        },
+        "docket_number": {
+          "type": "string"
+        },
+        "federal_cite_one": {
+          "type": "string"
+        },
+        "federal_cite_three": {
+          "type": "string"
+        },
+        "federal_cite_two": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "lexis_cite": {
+          "type": "string"
+        },
+        "neutral_cite": {
+          "type": "string"
+        },
+        "opinion_uris": {
+          "type": "array"
+        },
+        "resource_uri": {
+          "type": "string"
+        },
+        "scotus_early_cite": {
+          "type": "string"
+        },
+        "specialty_cite_one": {
+          "type": "string"
+        },
+        "state_cite_one": {
+          "type": "string"
+        },
+        "state_cite_regional": {
+          "type": "string"
+        },
+        "state_cite_three": {
+          "type": "string"
+        },
+        "state_cite_two": {
+          "type": "string"
+        },
+        "westlaw_cite": {
+          "type": "string"
+        }
+      }
+    },
+    "jurisdiction": {
+      "id": "jurisdiction",
+      "properties": {
+        "URL": {
+          "type": "string"
+        },
+        "citation_string": {
+          "type": "string"
+        },
+        "date_modified": {
+          "type": "date"
+        },
+        "end_date": {
+          "type": "date"
+        },
+        "full_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "in_use": {
+          "type": "boolean"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "position": {
+          "type": "float"
+        },
+        "resource_uri": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "datetime"
+        },
+        "start_date": {
+          "type": "string"
+        }
+      }
+    },
+    "coverage": {
+      "id": "coverage",
+      "properties": {
+        "annual_counts": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}
