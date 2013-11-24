@@ -2,7 +2,7 @@
   "apis": [
     {
       "name": "Court Listener API",
-      "description": "U.S. court opinions API as part of the Court Listener project, which currently aggregates 2,204,339 court opinions, from 350 jurisdictions.",
+      "description": "U.S. court opinions API as part of the CourtListener project, which currently aggregates more than 2,204,339 court opinions, from over 350 jurisdictions.",
       "image": "https://2.gravatar.com/avatar/87d484ca9ada35fd56c0c097a3bd88c9?d=https%3A%2F%2Fidenticons.github.com%2F635ccb973201d401a01de2e96638acd7.png&r=x&s=440",
       "keywords": "legal,opinion,court,citations,US",
       "license": "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US",
@@ -16,5 +16,5 @@
     }
   ],
   "tags": "api-commons-manifest",
-  "updated": "11/23/2013"
+  "updated": "11/24/2013"
 }
