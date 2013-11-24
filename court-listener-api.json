@@ -62,7 +62,7 @@
             },
             {
               "name": "limit",
-              "description": "number of records to limi response listing by (1000 max)",
+              "description": "number of records to limit response listing by (1000 max)",
               "required": false,
               "allowMultiple": false,
               "dataType": "string",
@@ -207,7 +207,7 @@
             },
             {
               "name": "limit",
-              "description": "number of records to limi response listing by (1000 max)",
+              "description": "number of records to limit response listing by (1000 max)",
               "required": false,
               "allowMultiple": false,
               "dataType": "string",
@@ -352,8 +352,8 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Pulls opinions that opinion cites",
-          "notes": "Provides a paginated display of the opinions that an opinion cites",
+          "summary": "Pulls opinions that cite the opinion",
+          "notes": "Provides a paginated display of the opinions that cite the opinion",
           "nickname": "getOpinion",
           "type": "opinion",
           "parameters": [
@@ -402,7 +402,7 @@
         {
           "method": "GET",
           "summary": "Pulls jurisdictions",
-          "notes": "Provides basic information about the 350 jurisdictions in the American court system",
+          "notes": "Provides basic information about the 350+ jurisdictions in the American court system",
           "nickname": "getJurisdiction",
           "type": "jurisdiction",
           "parameters": [
@@ -450,7 +450,7 @@
             },
             {
               "name": "limit",
-              "description": "number of records to limi response listing by (1000 max)",
+              "description": "number of records to limit response listing by (1000 max)",
               "required": false,
               "allowMultiple": false,
               "dataType": "string",
@@ -531,7 +531,7 @@
             },
             {
               "name": "limit",
-              "description": "number of records to limi response listing by (1000 max)",
+              "description": "number of records to limit response listing by (1000 max)",
               "required": false,
               "allowMultiple": false,
               "dataType": "string",
@@ -563,9 +563,9 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Runs advanced search",
-          "notes": "Provides an advanced search via solr",
-          "nickname": "search",
+          "summary": "Shows the number of opinions in each jurisdiction by year",
+          "notes": "Useful in identifying gaps in the corpus",
+          "nickname": "coverage",
           "type": "opinion",
           "parameters": [
             {
@@ -588,7 +588,7 @@
             },          
             {
               "name": "id",
-              "description": "Jurisdiction ID to be query",
+              "description": "Jurisdiction ID to be queried",
               "required": false,
               "allowMultiple": false,
               "dataType": "string",
