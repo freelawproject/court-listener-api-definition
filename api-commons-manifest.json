@@ -10,7 +10,7 @@
       "definitions": [
         {
           "type": "swagger",
-          "url": "https://github.com/freelawproject/court-listener-api-definition/api-commons-manifest.json"
+          "url": "https://raw.github.com/freelawproject/court-listener-api-definition/master/court-listener-api.json"
         }
       ]
     }
